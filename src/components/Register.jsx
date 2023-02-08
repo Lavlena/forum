@@ -6,6 +6,7 @@ const Register = () => {
         console.log(e.target.email.value);
         console.log(e.target.password.value);
         console.log(e.target.passwordrepeat.value);
+        console.log(e.target.avatar.value);
       }
     
 
@@ -29,6 +30,10 @@ const Register = () => {
                 <label> Repeat Password
                     <input type="password"
                            name="passwordrepeat" />
+                </label>
+                <label> User Avatar
+                    <input type="url"
+                           name="avatar" />
                 </label>
                 <button type="submit"> Sign Up </button>
             </form>
