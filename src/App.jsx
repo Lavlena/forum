@@ -1,5 +1,14 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Login from './components/Login';
+import Register from './components/Register';
+import Home from './components/Home';
+import Answers from './components/Answers';
+import NewQuestion from './components/NewQuestion';
+import NewAnswer from './components/NewAnswer';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
