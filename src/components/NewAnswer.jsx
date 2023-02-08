@@ -1,6 +1,7 @@
 const NewAnswer = () => {
     return(
         <>
+        <h1> New Answer </h1>
         </>
     )
 }

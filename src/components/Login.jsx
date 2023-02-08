@@ -1,6 +1,7 @@
 const Login = () => {
     return(
         <>
+        <h1> Log in </h1>
         </>
     )
 }

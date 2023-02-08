@@ -14,15 +14,17 @@ function App() {
   return (
     <>
          <Header/>
+         <hr />
          <Routes>
-          <Route path="/" element={<Login/>}/>
-          <Route path="/" element={<Register/>}/>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/" element={<Answers/>}/>
-          <Route path="/" element={<NewQuestion/>}/>
-          <Route path="/" element={<NewAnswer/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/home" element={<Home/>}/>
+          <Route path="/answers" element={<Answers/>}/>
+          <Route path="/newQuestion" element={<NewQuestion/>}/>
+          <Route path="/newAnswer" element={<NewAnswer/>}/>
           <Route path="/*" element={<h1>404 Page not Found</h1>} />
          </Routes>
+         <hr />
          <Footer/>
     </>
   );
