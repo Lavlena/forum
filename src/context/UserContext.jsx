@@ -9,17 +9,19 @@ const [users, setUsers] = useState (null);
 const [isLoggedIn, setIsLoggedIn] = useState (false);
 
 //STATE FUNCTION
-// const addUser = (newUser) => {
-// setUsers ([...users,newUser]);  
-//}
+const addUser = (newUser) => {
+setUsers ([...users,newUser]); 
+postUser(newUser);
+}
+
+
 //CRUD FUNCTIONS
  const postUser = (newUser) => {
     fetch ('http://localhost:5000/users', {
         method: 'POST',
         headers: {'Content-Type':"aplication/json"},
         body: JSON.stringify(newUser),
-    })
-    .then(res => res.json());
+    });
  }
 
  const getUsers = async () => {
@@ -40,8 +42,8 @@ const [isLoggedIn, setIsLoggedIn] = useState (false);
             setUsers,
             isLoggedIn,
             setIsLoggedIn,
-            postUser
-            
+            postUser,
+            addUser
         }}>
         {children}
         </ UserContext.Provider>

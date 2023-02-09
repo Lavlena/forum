@@ -8,12 +8,16 @@ import Answers from './components/Answers';
 import NewQuestion from './components/NewQuestion';
 import NewAnswer from './components/NewAnswer';
 import Footer from './components/Footer';
+import { useContext } from 'react';
+import UserContext from './context/UserContext';
 
 
 function App() {
+  const {users} = useContext(UserContext);
   return (
     <>
          <Header/>
+        
          <hr />
          <Routes>
           <Route path="/login" element={<Login/>}/>

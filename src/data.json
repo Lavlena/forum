@@ -5,22 +5,22 @@
       "username": "aaa",
       "email": "one@aaa.com",
       "password": "123",
-      "avatar":"https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image-File.png"
+      "avatar": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image-File.png"
     },
     {
       "id": 2,
       "username": "bbb",
       "email": "two@bbb.com",
       "password": "456",
-      "avatar":"https://www.shareicon.net/data/512x512/2016/09/15/829452_user_512x512.png"
+      "avatar": "https://www.shareicon.net/data/512x512/2016/09/15/829452_user_512x512.png"
     },
     {
       "id": 3,
       "username": "ccc",
       "email": "three@ccc.com",
       "password": "789",
-      "avatar":"https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
-    }    
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+    }
   ],
   "questions": [
     {
@@ -29,7 +29,7 @@
       "question": "Do you take some time to relax at least once a day?",
       "userId": 1,
       "likesno": 0,
-      "edited": "false"
+      "edited": false
     },
     {
       "id": 2,
@@ -37,7 +37,7 @@
       "question": "Can anyone learn a foreign language?",
       "userId": 1,
       "likesno": 0,
-      "edited": "false"
+      "edited": false
     },
     {
       "id": 3,
@@ -45,7 +45,7 @@
       "question": "What Is The Difference Between E-commerce And Internet Commerce?",
       "userId": 2,
       "likesno": 0,
-      "edited": "false"
+      "edited": false
     },
     {
       "id": 4,
@@ -86,8 +86,8 @@
       "userId": 3,
       "likesno": 0,
       "edited": false
-    }
-  ],
+    }    
+     ],
   "answers": [
     {
       "id": 1,
