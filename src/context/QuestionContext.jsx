@@ -1,6 +1,7 @@
 import { createContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+
 const QuestionContext = createContext();
 
 const QuestionProvider = ({children}) => {
@@ -37,7 +38,7 @@ const QuestionProvider = ({children}) => {
      const postQuestion = (newQuestion) => {
         fetch ('http://localhost:5000/questions', {
             method: 'POST',
-            headers: {'Content-Type':'aplication/json'},
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newQuestion),
         });
                

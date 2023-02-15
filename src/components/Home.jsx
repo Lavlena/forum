@@ -1,10 +1,24 @@
+import { useContext } from "react";
+import QuestionContext from "../context/QuestionContext";
+import Question from "./Question";
 
 const Home = () => {
    
-       
+    const {questions} = useContext(QuestionContext)
     return(
-        <>
-        <h1> Hello </h1>
+        <> 
+
+        <div className="test">
+           { questions && (questions.map((question, index) =>(
+            <Question
+                question={question}
+                key={index}
+            />
+           )))
+           }
+        </div>
+      
+      
         </>
             )
   }
