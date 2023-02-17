@@ -20,7 +20,7 @@ postUser(newUser);
  const postUser = (newUser) => {
     fetch ('http://localhost:5000/users', {
         method: 'POST',
-        headers: {'Content-Type':"aplication/json"},
+        headers: {'Content-Type':"application/json"},
         body: JSON.stringify(newUser),
     });
  }
