@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import QuestionContext from "../context/QuestionContext";
-import Question from "./Question";
+import Question from './Questions/Question'
 
 const Home = () => {
    
