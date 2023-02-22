@@ -19,6 +19,7 @@ const Answers = () =>{
     return(
         <>
         <h2> {questions && questions.find(question => question.id.toString() === questionid.toString()).question}</h2>
+        
         <div>
         { (answers) ?
             (answers.filter(answer => answer.questionId.toString() === questionid.toString()).map((answer,index) => (
