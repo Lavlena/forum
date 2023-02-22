@@ -26,7 +26,7 @@ const Question = ({question, index}) => {
         <h3>{question.title}</h3>
         <p>{question.question}</p>
         <div className="info">
-            <img src={author.avatar} alt="avatar" style={{height: '50px'}}/>
+            <img src={author.avatar} alt="avatar"style={{height:'50px'}}/>
             <span>{author.username}</span>
             <p>{question.edited ? "edited" : ""}</p>
         </div>
