@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useContext } from "react";
 import QuestionContext from "../../context/QuestionContext";
+import UserContext from "../../context/UserContext";
 
 const NewQuestion = () => {
     // const [questions, setQuestions] = useState({
@@ -8,6 +9,7 @@ const NewQuestion = () => {
     //     question:'',
         
     // });
+    const {isLoggedIn} = useContext(UserContext);
    const {postQuestion, addQuestion} = useContext(QuestionContext);
 
     const handleSubmit = (e) => {
@@ -19,6 +21,10 @@ const NewQuestion = () => {
             title: e.target.title.value,
             question: e.target.question.value,
             id: Date.now(),
+            userId: isLoggedIn.id,
+            likesno: [],
+            edited: false,
+
         
         };
         // postQuestion(newQ);
