@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, Outlet } from "react-router-dom";
+import UserContext from "../context/UserContext";
+import UserInfo from "./Users/UserInfo";
 
 const Header = () => {
+    const {isLoggedIn} = useContext(UserContext);
     return(
         <header>
                  <h1> Hello </h1>
@@ -10,10 +14,21 @@ const Header = () => {
                     <Link to={'/newQuestion'}> New Question </Link>
                     <Link to={'/newAnswer'}> New Answer </Link>
                 </div>
+
+                {isLoggedIn ?
+                   <UserInfo />
+                    :
                     <div className="logreg">
-                        <Link to={'/login'}> Log in </Link>
+                        <Link to={'/login'}> Login </Link>
                         <Link to={'/register'}> Register </Link>
                     </div>
+                }
+                <hr />
+                <Outlet/>
+                    {/* <div className="logreg">
+                        <Link to={'/login'}> Login </Link>
+                        <Link to={'/register'}> Register </Link>
+                    </div> */}
         </header>
     )
 }
