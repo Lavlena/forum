@@ -2,15 +2,16 @@ import { useContext } from "react";
 import QuestionContext from "../context/QuestionContext";
 import Question from './Questions/Question';
 import UserContext from "../context/UserContext";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
    
     const {questions} = useContext(QuestionContext);
     const {isLoggedIn} = useContext(UserContext);
+    const navigate = useNavigate();
 
     const handleNewQuestion = () => {
-        Navigate('/newquestion/');
+        navigate('/newQuestion/');
     }
 
     return(

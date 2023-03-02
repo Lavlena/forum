@@ -27,7 +27,7 @@ const EditAnswer = () => {
 
     return (
         <>
-        <div className="forma">
+        <div className="form">
         <h1>Edit your Answer</h1>
         <form onSubmit={handleSubmit}>
             <label htmlFor="answeredit">

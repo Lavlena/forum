@@ -21,14 +21,14 @@ const Answer = ({answer,index}) => {
         <>
         <div className="answer">
             <div className="info">
-                <img src={users.find(user => user.id.toString() === answer.userId.toString()).avatar} alt="abatar" />
+                <img src={users.find(user => user.id.toString() === answer.userId.toString()).avatar} alt="avatar" style={{height:'50px'}} />
                 <p>{users.find(user => user.id.toString() === answer.userId.toString()).username}</p>
                 <hr />
                 <h3>{answer.answer}</h3>
                 <hr />
                 <p>{answer.edited ? "edited" : ""}</p>
             </div>
-                <p>{new Date(answer.id).toLocsleDateString('LT')}</p>
+                <p>{new Date(answer.id).toLocaleDateString('LT')}</p>
                 <br />
                 {isLoggedIn && answer.userId.toString() === isLoggedIn.id.toString() &&
                 <div>

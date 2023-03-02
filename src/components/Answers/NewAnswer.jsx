@@ -37,7 +37,7 @@ const NewAnswer = () => {
     return(
         <>
         <h1> New Answer </h1>
-        <div>
+        <div className="form">
             <form onSubmit={handleSubmit}>
             <label> Answer
                   <textarea name="answer" 

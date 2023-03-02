@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import QuestionContext from "../../context/QuestionContext";
+import { useState } from "react";
 
 const EditQuestion = () => {
  const {questions, editQuestion} = useContext(QuestionContext);
@@ -15,7 +16,7 @@ const [dataTitle, setDataTitle] = useState(nowTitle);
 const navigate = useNavigate();
 
 const handleSubmit = (e) => {
-    e/preventDefault();
+    e.preventDefault();
 
     if(e.target.question.value !== nowQuestion || e.target.title.value !== nowTitle) {
         const renewQuestion = {
@@ -30,7 +31,7 @@ const handleSubmit = (e) => {
 
     return (
         <>
-      <div className="forma">
+      <div className="form">
             <h1>Edit Your Question</h1>
             <form onSubmit={handleSubmit}>
 
