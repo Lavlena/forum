@@ -14,7 +14,7 @@ const QuestionProvider = ({children}) => {
 }
 
   const deleteQuestion = (id) => {
-    setQuestions(questions.filter(question => question.id.toString() !== id));
+    setQuestions(questions.filter(question => question.id.toString() !== id.toString()));
    removeQuestion(id);
   }
 
@@ -69,7 +69,9 @@ const QuestionProvider = ({children}) => {
             postQuestion,
             addQuestion,
             deleteQuestion,
-            editQuestion
+            editQuestion,
+            removeQuestion,
+            updateQuestion
             
 
         }}>

@@ -16,7 +16,7 @@ const AnswerProvider = ({children}) => {
     }
 
     const deleteAnswer = (id) => {
-        setAnswers(answers.filter(answer => answer.id.toString() !== id));
+        setAnswers(answers.filter(answer => answer.id.toString() !== id.toString()));
         removeAnswer(id);
     }
 
@@ -70,7 +70,9 @@ const AnswerProvider = ({children}) => {
             postAnswer,
             addAnswer,
             deleteAnswer,
-            editAnswer
+            editAnswer,
+            updateAnswer,
+            removeAnswer
         }}>
             {children}
         </AnswerContext.Provider>

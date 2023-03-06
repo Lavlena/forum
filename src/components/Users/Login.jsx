@@ -28,6 +28,7 @@ const Login = () => {
         const isLogged = users.find(user => (user.username === values.username) && (user.password === values.password));
         if (isLogged === undefined){
             console.log ('underfined');
+            navigation('/register')
         }else {
             setIsLoggedIn(users.find(user => user.username === values.username));
             navigation('/home');
