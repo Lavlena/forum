@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import QuestionContext from "../../context/QuestionContext";
 import UserContext from "../../context/UserContext";
-
+import { useNavigate } from "react-router-dom";
 const NewQuestion = () => {
     // const [questions, setQuestions] = useState({
     //     title:'',
@@ -10,7 +10,8 @@ const NewQuestion = () => {
         
     // });
     const {isLoggedIn} = useContext(UserContext);
-   const {postQuestion, addQuestion} = useContext(QuestionContext);
+   const {questions, addQuestion} = useContext(QuestionContext);
+   const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -24,18 +25,24 @@ const NewQuestion = () => {
             userId: isLoggedIn.id,
             likesno: [],
             edited: false,
+        }
+        if (e.target.question.value === ""){
+            console.log('Must be filled, try again')
+        } else {
+            addQuestion(newQ);
+        }
 
-        
-        };
+        navigate(-1);
+
         // postQuestion(newQ);
-        addQuestion(newQ);
+       
           
       }
     
     return(
         <>
         <h1> New Question </h1>
-        <div>
+        <div className="form">
             <form onSubmit={handleSubmit}>
                 <label> Title
                     <input type="text"

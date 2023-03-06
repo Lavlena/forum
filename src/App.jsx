@@ -33,7 +33,7 @@ function App() {
           <Route path="/home" element={<Home/>}/>
           <Route path="/answers/:questionid" element={<Answers/>}/>
           <Route path="/newQuestion" element={<NewQuestion/>}/>
-          <Route path="/editQuestion/:questionid" element={<EditQuestion/>}></Route>
+          <Route path="/editQuestion/:questionid" element={<EditQuestion/>}/>
           <Route path="/newAnswer/:questionid" element={<NewAnswer/>}/>
           <Route path="/editAnswer/:answerid" element={<EditAnswer/>}/>
           

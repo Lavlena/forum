@@ -18,7 +18,7 @@ const QuestionProvider = ({children}) => {
    removeQuestion(id);
   }
 
-  const editQuesiuon = (id, editedQuestion) => {
+  const editQuestion = (id, editedQuestion) => {
     setQuestions(questions.map(question => question.id.toString() === id ? {...question, ...editedQuestion} : question));
        updateQuestion(id, editedQuestion);
   }
@@ -69,7 +69,7 @@ const QuestionProvider = ({children}) => {
             postQuestion,
             addQuestion,
             deleteQuestion,
-            editQuesiuon
+            editQuestion
             
 
         }}>
